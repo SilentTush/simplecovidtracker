@@ -12,7 +12,7 @@ function CountryCard({ data }) {
       <img src={data.countryInfo.flag} alt="countryFlag" />
       <div className="detailsWrapper">
         <p className="country">{data.country}</p>
-        <p className="cases">Cases-today {data.todayCases}</p>
+        <p className="cases">Active cases {data.active}</p>
         <p className="deaths">Deaths-today {data.todayDeaths}</p>
       </div>
     </div>
