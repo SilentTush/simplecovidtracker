@@ -114,3 +114,36 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .countryPage {
+    img {
+      border-radius: 0;
+    }
+    .detailsWrapper {
+      padding: 0px;
+      padding-top: 10px;
+      width: 100%;
+      .dataItem {
+        font-size: 14px;
+        font-weight: 500;
+        width: 100%;
+        height: 80px;
+      }
+    }
+    .historicWrapper {
+      padding: 0px;
+      padding-top: 10px;
+      width: 100%;
+      .dataItem {
+        font-size: 12px;
+        font-weight: 500;
+        width: 100%;
+        height: 80px;
+      }
+      .heading {
+        font-size: 14px;
+      }
+    }
+  }
+}
