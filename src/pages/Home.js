@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import CountryCard from "../components/CountryCard";
 import Header from "../components/Header";
 
@@ -9,7 +8,8 @@ function Home() {
   const [countryListB, setCountryListB] = useState([]);
   const [loading, setloading] = useState(false);
   const [query, setquery] = useState("");
-  const history = useHistory();
+
+  // loading data when page loads
   useEffect(() => {
     getData();
     async function getData() {
@@ -21,6 +21,8 @@ function Home() {
       });
     }
   }, []);
+
+  // search whenever search input changes
   useEffect(() => {
     if (query === "") {
       setCountryList(countryListB);
@@ -34,7 +36,6 @@ function Home() {
       setCountryList(match);
     }
   }, [query]);
-  function SearchCountry() {}
   return (
     <div className="home">
       <Header heading="Simple Covid Tracker" />

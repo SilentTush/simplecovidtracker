@@ -8,6 +8,8 @@ function CountryPage() {
   const [data, setData] = useState([]);
   const [historicData, setHistoricData] = useState(null);
   const history = useHistory();
+
+  // for loading historic data
   async function loadHistoricData() {
     axios
       .get(`https://corona.lmao.ninja/v2/historical/${countryName}`)
@@ -18,6 +20,8 @@ function CountryPage() {
         alert(`Historic data for ${countryName}, does not exist`);
       });
   }
+
+  // loading data when page loads
   useEffect(() => {
     getData();
     async function getData() {
