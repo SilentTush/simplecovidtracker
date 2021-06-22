@@ -13,7 +13,7 @@ function CountryCard({ data }) {
       <div className="detailsWrapper">
         <p className="country">{data.country}</p>
         <p className="cases">Active cases {data.active}</p>
-        <p className="deaths">Deaths-today {data.todayDeaths}</p>
+        <p className="deaths">Deaths today {data.todayDeaths}</p>
       </div>
     </div>
   );
